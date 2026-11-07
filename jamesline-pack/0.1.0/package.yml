@@ -1,0 +1,7 @@
+matches:
+  - trigger: ":hello"
+    replace: "Hello, world!"
+  - trigger: ::ssh
+    replace: "ssh-mini "
+  - trigger: ::chm
+    replace: chmod +x "{{?filepath}}"
