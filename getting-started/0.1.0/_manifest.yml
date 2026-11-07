@@ -1,0 +1,7 @@
+name: getting-started
+title: Getting started
+description: A minimal example package for this private Espanso store.
+version: 0.1.0
+author: jameslineuk-hue
+tags: [example, productivity]
+homepage: https://github.com/jameslineuk-hue/espanso-packages
