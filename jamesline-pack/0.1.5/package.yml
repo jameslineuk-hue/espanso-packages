@@ -1,0 +1,12 @@
+matches:
+  - trigger: ":hello"
+    replace: "Hello, world!"
+  - trigger: ::ssh
+    replace: "ssh-mini"
+  - trigger: "::chm"
+    replace: 'chmod +x "{{filepath}}"'
+    vars:
+      - name: filepath
+        type: shell
+        params:
+          cmd: "osascript -e 'try' -e 'POSIX path of (choose file with prompt \"Select a file\")' -e 'on error' -e 'return \"\"' -e 'end try'"
