@@ -1,0 +1,13 @@
+matches:
+  - trigger: ":hello"
+    replace: "Hello, world!"
+  - trigger: ::ssh
+    replace: "ssh-mini "
+  - trigger: "::chm"
+    replace: 'chmod +x "{{form1.filepath}}"'
+    vars:
+      - name: form1
+        type: form
+        params:
+          layout: "File path: [[filepath]]"
+
