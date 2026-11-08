@@ -1,0 +1,5 @@
+matches:
+  - trigger: "::Legodown"
+    replace: "~/LegoHub-Downloads"
+  - trigger: "::Ohmy"
+    replace: "~/.oh-my-zsh"
