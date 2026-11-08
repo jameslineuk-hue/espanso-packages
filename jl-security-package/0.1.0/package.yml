@@ -1,0 +1,17 @@
+matches:
+  - trigger: ":genpw"
+    replace: "{{password}}"
+    vars:
+      - name: password
+        type: shell
+        params:
+          cmd: "C_ALL=C tr -dc 'A-Za-z0-9!@#$%^&*' </dev/urandom | head -c 20"
+          trim: true
+  - trigger: "::genpw"
+    replace: "{{password}}"
+    vars:
+      - name: password
+        type: shell
+        params:
+          cmd: "C_ALL=C tr -dc 'A-Za-z0-9!@#$%^&*' </dev/urandom | head -c 20 | tee >(pbcopy)"
+          trim: true
