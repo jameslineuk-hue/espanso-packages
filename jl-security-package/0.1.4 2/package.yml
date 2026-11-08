@@ -1,0 +1,15 @@
+matches:
+  - trigger: "::dash"
+    replace: "Lexi-Glasgow-1973"
+  - trigger: "::apple"
+    replace: "Tiger-Portsmouth-81"
+  - trigger: "::bit"
+    replace: "Indy-Elephant&1957"
+  - trigger: "::genpw"
+    replace: "{{password}}"
+    vars:
+      - name: password
+        type: shell
+        params:
+          cmd: "C_ALL=C tr -dc 'A-Za-z0-9!@#$%^&*' </dev/urandom | head -c 20 | tee >(pbcopy)"
+          trim: true
